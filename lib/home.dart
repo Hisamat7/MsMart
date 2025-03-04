@@ -9,14 +9,14 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  Widget listContainer({
-    required String text,
-    required String image
-  }) {
-    return Container(
+  Widget listContainer({required String text, required String image}) {
+    return Card(
       margin: EdgeInsets.only(bottom: 15),
-      decoration: BoxDecoration(
-          color: Colors.grey[100], borderRadius: BorderRadius.circular(30)),
+      color: Colors.white,
+      elevation: 5,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(20),
+      ),
       child: ListTile(
         leading: Image.asset(image),
         title: Text(text),
@@ -149,8 +149,12 @@ class _HomeState extends State<Home> {
                               SizedBox(
                                 height: 30.h,
                               ),
-                              listContainer(text: "Continue with google",image:'asset/image/google-icon 1.png' ),
-                              listContainer(text: "Continue with facebook",image:'asset/image/facebook-3 1.png' ),
+                              listContainer(
+                                  text: "Continue with google",
+                                  image: 'asset/image/google-icon 1.png'),
+                              listContainer(
+                                  text: "Continue with facebook",
+                                  image: 'asset/image/facebook-3 1.png'),
                             ],
                           ),
                         ),
