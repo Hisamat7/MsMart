@@ -8,6 +8,7 @@ class Home extends StatefulWidget {
   State<Home> createState() => _HomeState();
 }
 
+
 class _HomeState extends State<Home> {
   Widget listContainer({required String text, required String image}) {
     return Card(
