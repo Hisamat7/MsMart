@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:msmart/features/authentication/views/login/LoginScreen.dart';
+import 'package:msmart/features/authentication/views/splashScreen/SplashScreen.dart';
+import 'package:msmart/features/utils/constants/textTheme/TextTheme.dart';
 
 void main() {
   runApp(
@@ -10,12 +11,11 @@ void main() {
       splitScreenMode: true,
       builder: (context, child){
         return MaterialApp(
-
+          themeMode: ThemeMode.system,
           debugShowCheckedModeBanner: false,
-          home:LoginScreen(),
-          theme: ThemeData(
-             fontFamily: 'Poppins',
-          ),
+          home:SplashScreen(),
+          theme: AppTheme.lightTheme,
+          darkTheme: AppTheme.darkTheme
         );
       }
     )

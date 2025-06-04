@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:msmart/features/authentication/views/register/RegisterScreen.dart';
-import 'package:msmart/features/authentication/views/widgets/ButtonWidget.dart';
-import 'package:msmart/features/authentication/views/widgets/TextFieldWidget.dart';
+import 'package:msmart/features/common/widgets/ButtonWidget.dart';
+import 'package:msmart/features/common/widgets/TextFieldWidget.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -31,7 +31,7 @@ class _LoginScreenState extends State<LoginScreen> {
               child: Text(
                 "Shop Smarter",
                 style: TextStyle(
-                  fontSize: 24.sp,
+                
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -44,7 +44,7 @@ class _LoginScreenState extends State<LoginScreen> {
               child: Text(
                 "Login into Access Exclusive Deals and Simplify Your Shopping Experience",
                 style: TextStyle(
-                  fontSize: 13.sp,
+                  
                   color: Colors.grey,
                 ),
               ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:msmart/features/authentication/views/widgets/ButtonWidget.dart';
-import 'package:msmart/features/authentication/views/widgets/TextFieldWidget.dart';
+import 'package:msmart/features/common/widgets/ButtonWidget.dart';
+import 'package:msmart/features/common/widgets/TextFieldWidget.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
