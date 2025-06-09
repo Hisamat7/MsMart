@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:iconsax/iconsax.dart';
 import 'package:msmart/features/authentication/views/register/RegisterScreen.dart';
 import 'package:msmart/features/common/widgets/ButtonWidget.dart';
 import 'package:msmart/features/common/widgets/TextFieldWidget.dart';
+import 'package:msmart/features/utils/constants/text/AppText.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -29,7 +31,7 @@ class _LoginScreenState extends State<LoginScreen> {
             Align(
               alignment: Alignment.topLeft,
               child: Text(
-                "Shop Smarter",
+                 AppText.loginScreenTitle,
                 style: TextStyle(
                 
                   fontWeight: FontWeight.bold,
@@ -42,7 +44,7 @@ class _LoginScreenState extends State<LoginScreen> {
             Align(
               alignment: Alignment.topLeft,
               child: Text(
-                "Login into Access Exclusive Deals and Simplify Your Shopping Experience",
+                 AppText.loginScreenSubTitle,
                 style: TextStyle(
                   
                   color: Colors.grey,
@@ -52,13 +54,13 @@ class _LoginScreenState extends State<LoginScreen> {
             SizedBox(height: 20.h),
             TextFieldWidget(
               hintText: "Enter the email", 
-              icon: Icons.email, 
+              icon: Iconsax.direct_right, 
               label: "Email",
             ),
             SizedBox(height: 20.h),
             TextFieldWidget(
               hintText: "enter the password", 
-              icon: Icons.password, 
+              icon: Iconsax.password_check, 
               label: "Password",
             ),
             SizedBox(height: 20.h),

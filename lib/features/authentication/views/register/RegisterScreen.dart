@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:iconsax/iconsax.dart';
 import 'package:msmart/features/common/widgets/ButtonWidget.dart';
 import 'package:msmart/features/common/widgets/TextFieldWidget.dart';
+import 'package:msmart/features/utils/constants/text/AppText.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
@@ -27,7 +29,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               Align(
                 alignment: Alignment.topLeft,
                 child: Text(
-                  "Let Get You Registered",
+                  AppText.registerScreenTitle,
                   style: TextStyle(
                     fontSize: 20.sp,
                   
@@ -58,7 +60,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               
               TextFieldWidget(
                 hintText: "Enter the email",
-                icon: Icons.email,
+                icon: Iconsax.direct_right,
                 label: "Email",
               ),
               SizedBox(height: 15.h),
@@ -70,14 +72,14 @@ class _RegisterScreenState extends State<RegisterScreen> {
               SizedBox(height: 15.h),
               TextFieldWidget(
                 hintText: "Enter the password",
-                icon: Icons.password,
+                icon: Iconsax.password_check,
                 label: "Password",
                 
               ),
               SizedBox(height: 15.h),
               TextFieldWidget(
                 hintText: "Confirm password",
-                icon: Icons.password,
+                icon: Iconsax.password_check,
                 label: "Confirm Password",
                
               ),

@@ -21,8 +21,11 @@ class ButtonWidget extends StatelessWidget {
     return ElevatedButton(
       onPressed: onPressed,  
       child: Text(
+         style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+           color: textColor,
+         ),
         text, 
-        style:  TextStyle(color:textColor),
+       
       ),
       style: ElevatedButton.styleFrom(
         

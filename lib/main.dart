@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:msmart/features/common/widgets/OnBoardingScreenWidget.dart';
 import 'package:msmart/features/authentication/views/splashScreen/SplashScreen.dart';
 import 'package:msmart/features/utils/constants/textTheme/TextTheme.dart';
 
@@ -13,7 +14,7 @@ void main() {
         return MaterialApp(
           themeMode: ThemeMode.system,
           debugShowCheckedModeBanner: false,
-          home:SplashScreen(),
+          home: SplashScreen(),
           theme: AppTheme.lightTheme,
           darkTheme: AppTheme.darkTheme
         );
