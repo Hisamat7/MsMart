@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:msmart/features/authentication/views/AcSuccessScreen/AccountSuccessScreen.dart';
 import 'package:msmart/features/common/widgets/ButtonWidget.dart';
 import 'package:msmart/features/common/widgets/TextFieldWidget.dart';
 import 'package:msmart/features/utils/constants/text/AppText.dart';
@@ -20,7 +22,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
         backgroundColor: Colors.transparent,
         surfaceTintColor: Colors.transparent,
       ),
-      backgroundColor: Colors.white,
       body: SafeArea(
         child: SingleChildScrollView(
           padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
@@ -30,10 +31,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 alignment: Alignment.topLeft,
                 child: Text(
                   AppText.registerScreenTitle,
-                  style: TextStyle(
-                    fontSize: 20.sp,
-                  
-                  ),
+                  style: Theme.of(context).textTheme.headlineMedium,
                 )),
               SizedBox(
                 height: 110.h,
@@ -41,17 +39,19 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   children: [
                     Expanded(
                       child: TextFieldWidget(
-                        hintText: "Enter the first name",
-                        icon: Icons.person,
-                        label: "First Name",
+                        validator: (p0) => p0!.isEmpty ? AppText.firstNameErrorText : null,
+                        hintText: AppText.firstNameHintText,
+                        icon: Iconsax.user,
+                        label: AppText.firstNameLabel,
                       ),
                     ),
                     SizedBox(width: 15.w),
                     Expanded(
                       child: TextFieldWidget(
-                        hintText: "Enter the last name",
-                        icon: Icons.person,
-                        label: "Last Name",
+                        validator: (p0) => p0!.isEmpty ? AppText.lastNameErrorText : null,
+                        hintText: AppText.lastNameHintText,
+                        icon:  Iconsax.user,
+                        label: AppText.lastNameLabel,
                       ),
                     ),
                   ],
@@ -59,34 +59,66 @@ class _RegisterScreenState extends State<RegisterScreen> {
               ),
               
               TextFieldWidget(
-                hintText: "Enter the email",
+                validator: (p0) => p0!.isEmpty ? AppText.emailErrorText : null,
+                hintText: AppText.emailHintText,
                 icon: Iconsax.direct_right,
-                label: "Email",
+                label: AppText.emailLabel,
               ),
               SizedBox(height: 15.h),
               TextFieldWidget(
-                hintText: "Enter the phone number",
-                icon: Icons.phone,
-                label: "Phone Number",
+                validator: (p0) => p0!.isEmpty ? AppText.phoneErrorText : null,
+                hintText: AppText.phoneHintText,
+                icon: Iconsax.call,
+                label: AppText.phoneLabel,
               ),
               SizedBox(height: 15.h),
               TextFieldWidget(
-                hintText: "Enter the password",
+                validator: (p0) => p0!.isEmpty ? AppText.passwordErrorText : null,
+                hintText: AppText.passwordHintText,
                 icon: Iconsax.password_check,
-                label: "Password",
+                label: AppText.passwordLabel,
                 
               ),
-              SizedBox(height: 15.h),
-              TextFieldWidget(
-                hintText: "Confirm password",
-                icon: Iconsax.password_check,
-                label: "Confirm Password",
-               
+              SizedBox(height: 10.h),
+              Row(
+                children: [
+                  Checkbox(value: false, onChanged: (value) {}),
+                  RichText(
+                    
+                    text: TextSpan(
+                    
+                    text: AppText.iAgreeTo,
+                    style: Theme.of(context).textTheme.bodySmall,
+                    children: [
+                      TextSpan(
+                        text: AppText.privacyPolicy,
+                        style: Theme.of(context).textTheme.bodySmall!.copyWith(color: Colors.blue,
+                        decoration: TextDecoration.underline
+                        ),
+                      ),
+                      
+                      TextSpan(
+                        text: AppText.and,
+                      ),
+                      
+                      TextSpan(
+                        
+                        text:  AppText.termsOfUse,
+                        style: Theme.of(context).textTheme.bodySmall!.copyWith(color: Colors.blue,
+                        decoration: TextDecoration.underline
+                        ),
+                      ),
+                    ]
+                  )
+                  )
+                ],
               ),
-              SizedBox(height: 30.h),
+              SizedBox(height: 10.h),
               ButtonWidget(
-                text: "Create Account",
-                onPressed: () {},
+                text: AppText.createButtonText,
+                onPressed: () {
+                  Get.to(()=>const AccountSuccessScreen());
+                },
               ),
               SizedBox(height: 20.h),
               // Divider with "Or Sign In With" text
@@ -101,7 +133,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 10.w),
                     child: Text(
-                      "Or Sign In With",
+                      AppText.orSignWithText,
                       style: TextStyle(
                         color: Colors.grey,
                         fontSize: 14.sp,
@@ -121,11 +153,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  _buildSocialButton(Icons.g_mobiledata, "Google", () {}),
+                  _buildSocialButton(Icons.g_mobiledata, AppText.googleButtonText, () {}),
                   SizedBox(width: 20.w),
-                  _buildSocialButton(Icons.apple, "Apple", () {}),
+                  _buildSocialButton(Icons.apple, AppText.appleButtonText, () {}),
                   SizedBox(width: 20.w),
-                  _buildSocialButton(Icons.facebook, "Facebook", () {}),
+                  _buildSocialButton(Icons.facebook, AppText.facebookButtonText, () {}),
                 ],
               ),
              

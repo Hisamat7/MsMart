@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:msmart/features/common/widgets/OnBoardingScreenWidget.dart';
+import 'package:get/route_manager.dart';
 import 'package:msmart/features/authentication/views/splashScreen/SplashScreen.dart';
 import 'package:msmart/features/utils/constants/textTheme/TextTheme.dart';
 
@@ -11,7 +11,7 @@ void main() {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child){
-        return MaterialApp(
+        return GetMaterialApp(
           themeMode: ThemeMode.system,
           debugShowCheckedModeBanner: false,
           home: SplashScreen(),

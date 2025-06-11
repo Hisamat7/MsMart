@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/route_manager.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:msmart/features/authentication/views/ForgetScreen/ForgetScreen.dart';
 import 'package:msmart/features/authentication/views/register/RegisterScreen.dart';
 import 'package:msmart/features/common/widgets/ButtonWidget.dart';
 import 'package:msmart/features/common/widgets/TextFieldWidget.dart';
@@ -17,7 +19,6 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       resizeToAvoidBottomInset: false,
       body: Padding(
         padding: const EdgeInsets.only(left: 20, right: 20),
@@ -32,10 +33,7 @@ class _LoginScreenState extends State<LoginScreen> {
               alignment: Alignment.topLeft,
               child: Text(
                  AppText.loginScreenTitle,
-                style: TextStyle(
-                
-                  fontWeight: FontWeight.bold,
-                ),
+                style: Theme.of(context).textTheme.headlineMedium,
               ),
             ),
             SizedBox(
@@ -45,48 +43,49 @@ class _LoginScreenState extends State<LoginScreen> {
               alignment: Alignment.topLeft,
               child: Text(
                  AppText.loginScreenSubTitle,
-                style: TextStyle(
-                  
-                  color: Colors.grey,
-                ),
+                style: Theme.of(context).textTheme.bodySmall,
               ),
             ),
             SizedBox(height: 20.h),
             TextFieldWidget(
-              hintText: "Enter the email", 
+              validator: (p0) => p0!.isEmpty ? AppText.emailErrorText : null,
+              hintText: AppText.emailHintText, 
               icon: Iconsax.direct_right, 
-              label: "Email",
+              label: AppText.emailLabel,
             ),
             SizedBox(height: 20.h),
             TextFieldWidget(
-              hintText: "enter the password", 
+              validator: (p0) => p0!.isEmpty ? AppText.passwordErrorText : null,
+              hintText: AppText.passwordHintText, 
               icon: Iconsax.password_check, 
-              label: "Password",
+              label: AppText.passwordLabel,
             ),
             SizedBox(height: 20.h),
             Row(
               children: [
                 Checkbox(value: false, onChanged: (value){}),
-                Text("Remember me"),
+                Text(AppText.rememberMeText),
                 const Spacer(),
-                Text(
-                  "Forget Password?", 
-                  style: TextStyle(color: Colors.blueAccent),
-                ),
+                TextButton(
+                  onPressed: (){
+                    Get.to(() => const ForgetScreen());
+                  },
+                  child: const Text(AppText.forgetTitle,style: TextStyle(color: Colors.blueAccent),),),
+          
               ],
             ),
             SizedBox(height: 30.h),
             ButtonWidget(
-              text: "Login",  
+              text: AppText.loginButtonText,  
               onPressed: (){},
             ),
             SizedBox(height: 10.h),
             ButtonWidget(
-              text: "Create Account", 
+              text: AppText.createButtonText, 
               color: Colors.white, 
               textColor: const Color.fromRGBO(0, 0, 0, 1), 
               onPressed: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context) => const RegisterScreen()));
+               Get.to(() => const RegisterScreen());
               },
             ),
             SizedBox(height: 30.h),
@@ -102,7 +101,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 10.w),
                   child: Text(
-                    "Or Sign In With",
+                    AppText.orSignWithText,
                     style: TextStyle(
                       color: Colors.grey,
                       fontSize: 14.sp,
@@ -123,11 +122,11 @@ class _LoginScreenState extends State<LoginScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                _buildSocialButton(Icons.g_mobiledata, "Google", () {}),
+                _buildSocialButton(Icons.g_mobiledata, AppText.googleButtonText, () {}),
                 SizedBox(width: 20.w),
-                _buildSocialButton(Icons.apple, "Apple", () {}),
+                _buildSocialButton(Icons.apple, AppText.appleButtonText, () {}),
                 SizedBox(width: 20.w),
-                _buildSocialButton(Icons.facebook, "Facebook", () {}),
+                _buildSocialButton(Icons.facebook, AppText.facebookButtonText, () {}),
               ],
             ),
           ],
