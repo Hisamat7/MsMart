@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/route_manager.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:msmart/NavigationMenu.dart';
 import 'package:msmart/features/authentication/views/ForgetScreen/ForgetScreen.dart';
 import 'package:msmart/features/authentication/views/register/RegisterScreen.dart';
 import 'package:msmart/features/common/widgets/ButtonWidget.dart';
 import 'package:msmart/features/common/widgets/TextFieldWidget.dart';
+import 'package:msmart/features/utils/constants/colors/ColorsWidget.dart';
 import 'package:msmart/features/utils/constants/text/AppText.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -70,14 +72,16 @@ class _LoginScreenState extends State<LoginScreen> {
                   onPressed: (){
                     Get.to(() => const ForgetScreen());
                   },
-                  child: const Text(AppText.forgetTitle,style: TextStyle(color: Colors.blueAccent),),),
+                  child:  Text(AppText.forgetTitle,style: TextStyle(color: AppColors.primary),),),
           
               ],
             ),
             SizedBox(height: 30.h),
             ButtonWidget(
               text: AppText.loginButtonText,  
-              onPressed: (){},
+              onPressed: (){
+                Get.to(() => NavigationMenu());
+              },
             ),
             SizedBox(height: 10.h),
             ButtonWidget(
@@ -95,7 +99,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 Expanded(
                   child: Divider(
                     thickness: 1,
-                    color: Colors.grey[300],
+                    color: AppColors.subtitleColor,
                   ),
                 ),
                 Padding(
@@ -111,7 +115,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 Expanded(
                   child: Divider(
                     thickness: 1,
-                    color: Colors.grey[300],
+                    color: AppColors.subtitleColor,
                   ),
                 ),
               ],
@@ -146,7 +150,7 @@ class _LoginScreenState extends State<LoginScreen> {
             height: 60.h,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              border: Border.all(color: Colors.grey[300]!),
+              border: Border.all(color: AppColors.subtitleColor),
             ),
             child: Icon(
               icon,

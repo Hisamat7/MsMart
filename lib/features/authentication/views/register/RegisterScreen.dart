@@ -5,6 +5,7 @@ import 'package:iconsax/iconsax.dart';
 import 'package:msmart/features/authentication/views/AcSuccessScreen/AccountSuccessScreen.dart';
 import 'package:msmart/features/common/widgets/ButtonWidget.dart';
 import 'package:msmart/features/common/widgets/TextFieldWidget.dart';
+import 'package:msmart/features/utils/constants/colors/ColorsWidget.dart';
 import 'package:msmart/features/utils/constants/text/AppText.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -19,8 +20,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        surfaceTintColor: Colors.transparent,
+        backgroundColor: AppColors.appBarColor,
+        surfaceTintColor: AppColors.appBarColor,
       ),
       body: SafeArea(
         child: SingleChildScrollView(
@@ -143,7 +144,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   Expanded(
                     child: Divider(
                       thickness: 1,
-                      color: Colors.grey[300],
+                      color: AppColors.subtitleColor,
                     ),
                   ),
                 ],
@@ -179,7 +180,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
             height: 60.h,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              border: Border.all(color: Colors.grey[300]!),
+              border: Border.all(color: AppColors.subtitleColor),
             ),
             child: Icon(
               icon,

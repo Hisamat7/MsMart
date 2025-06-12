@@ -5,4 +5,9 @@ class AppImages {
   static const String onBoardingTwo = 'asset/image/onboardingtwo.png';
   static const String emailScreen = 'asset/image/email_image.png';
   static const String accountSuccess = 'asset/image/accountSuccessful.png';
+  static const String running ='asset/image/Running.png';
+  static const String  sofa = 'asset/image/Sofa.png';
+  static const String sneakers = 'asset/image/Sneakers.png';
+  static const String cpu = 'asset/image/Cpu.png';
+  static const String clothes = 'asset/image/Clothes hanger.png';
 }
