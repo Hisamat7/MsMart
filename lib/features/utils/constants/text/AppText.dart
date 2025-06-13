@@ -58,4 +58,6 @@ class AppText {
 
   static const accountSuccessTextTitle = "Account Created Successfully!";
   static const accountSuccessTextSubTitle = "Congratulations! Your account has been successfully created. You can now explore all the amazing features, start personalizing your experience, and enjoy seamless access to our services. Let’s get started!";
+  static const searchHintText = "Search in store";
+  
 }

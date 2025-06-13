@@ -10,4 +10,5 @@ class AppImages {
   static const String sneakers = 'asset/image/Sneakers.png';
   static const String cpu = 'asset/image/Cpu.png';
   static const String clothes = 'asset/image/Clothes hanger.png';
+  static const String banner = 'asset/image/banner.png';
 }
