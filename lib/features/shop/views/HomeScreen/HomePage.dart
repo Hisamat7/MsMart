@@ -5,6 +5,7 @@ import 'package:iconsax/iconsax.dart';
 import 'package:msmart/features/common/widgets/CircleWidget.dart';
 import 'package:msmart/features/common/widgets/PopularCategoriesWidget.dart';
 import 'package:msmart/features/common/widgets/SearchBarAPP.dart';
+import 'package:msmart/features/shop/views/Products/Products.dart';
 import 'package:msmart/features/utils/constants/colors/ColorsWidget.dart';
 import 'package:msmart/features/utils/constants/images/AppImages.dart';
 
@@ -27,7 +28,7 @@ class HomePage extends StatelessWidget {
           children: [
             // Header Section with Blue Background
             SizedBox(
-              height: 300.h,
+              height: 260.h,
               child: Container(
                 decoration: BoxDecoration(
                   color: AppColors.primary,
@@ -52,7 +53,7 @@ class HomePage extends StatelessWidget {
                     
                     // Main Content
                     Padding(
-                      padding: EdgeInsets.only(top: 30.h, left: 20.w, right: 20.w),
+                      padding: EdgeInsets.only(top: 20.h, left: 20.w, right: 20.w),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -90,7 +91,7 @@ class HomePage extends StatelessWidget {
                             ],
                           ),
                           
-                          SizedBox(height: 40.h),
+                          SizedBox(height: 15.h),
                           
                           // Popular Categories Title
                           Text(
@@ -101,7 +102,7 @@ class HomePage extends StatelessWidget {
                                 ),
                           ),
                           
-                          SizedBox(height: 25.h),
+                          SizedBox(height: 15.h),
                           
                           // Popular Categories List
                           SizedBox(
@@ -159,7 +160,7 @@ class HomePage extends StatelessWidget {
              title: Text(
                'Popular Items',
                style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                     color: Colors.white,
+                     color:isDarkMode ? Colors.white : Colors.black,
                      fontWeight: FontWeight.bold,
                    ),
              ),
@@ -173,15 +174,7 @@ class HomePage extends StatelessWidget {
            GridView.count(
             crossAxisCount: 2 ,
             children: List.generate(8, (index) {
-              return Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(12.r),
-                  ),
-                ),
-              );
+              return Products();
             }),
            
            )
