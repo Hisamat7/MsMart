@@ -60,4 +60,14 @@ class AppText {
   static const accountSuccessTextSubTitle = "Congratulations! Your account has been successfully created. You can now explore all the amazing features, start personalizing your experience, and enjoy seamless access to our services. Let’s get started!";
   static const searchHintText = "Search in store";
   
+  static const popularItems = "Popular Items";
+  static const viewAll = 'view All';
+
+  static const sports = 'Sports';
+  static const electronics = 'Electronics';
+  static const shoes = 'Shoes';
+  static const clothes = 'Clothes';
+  static const furniture = 'Furniture';
+
+  static const popularCategories = "Popular Categories";
 }

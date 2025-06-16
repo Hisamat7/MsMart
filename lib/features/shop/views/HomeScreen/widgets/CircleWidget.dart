@@ -7,10 +7,10 @@ class CircleWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-                      height: 350.h,
-                      width: 350.w,
+                      height: 270.h,
+                      width: 270.w,
                       decoration: BoxDecoration(
-                        color: Colors.white.withOpacity(0.1),
+                        color: Colors.white.withOpacity(0.125),
                         shape: BoxShape.circle,
                       ),
                     );

@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:msmart/features/common/widgets/CircleWidget.dart';
-import 'package:msmart/features/common/widgets/PopularCategoriesWidget.dart';
+import 'package:msmart/features/shop/views/HomeScreen/widgets/CircleWidget.dart';
+import 'package:msmart/features/shop/views/HomeScreen/widgets/PopularCategoriesWidget.dart';
 import 'package:msmart/features/common/widgets/SearchBarAPP.dart';
 import 'package:msmart/features/shop/views/Products/Products.dart';
 import 'package:msmart/features/utils/constants/colors/ColorsWidget.dart';
 import 'package:msmart/features/utils/constants/images/AppImages.dart';
+import 'package:msmart/features/utils/constants/text/AppText.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -21,165 +22,183 @@ class HomePage extends StatelessWidget {
       AppImages.banner,  
     ];
 
-
-    return SafeArea(
-      child: Scaffold(
-        body: Column(
-          children: [
-            // Header Section with Blue Background
-            SizedBox(
-              height: 260.h,
-              child: Container(
-                decoration: BoxDecoration(
-                  color: AppColors.primary,
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(40.r),
-                    bottomRight: Radius.circular(40.r),
+    return Scaffold(
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              // Header Section with Blue Background
+              SizedBox(
+                height: 250.h,
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: AppColors.primary,
+                    borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(40.r),
+                      bottomRight: Radius.circular(40.r),
+                    ),
                   ),
-                ),
-                child: Stack(
-                  children: [
-                    // Decorative Circles
-                    Positioned(
-                      top: -130.h,
-                      right: -230.w,
-                      child: CircleWidget()
-                    ),
-                    Positioned(
-                      top: 150.h,
-                      right: -230.w,
-                      child: CircleWidget()
-                    ),
-                    
-                    // Main Content
-                    Padding(
-                      padding: EdgeInsets.only(top: 20.h, left: 20.w, right: 20.w),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          // Header Row with Trailing Icon
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    "Good Morning",
-                                    style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                  ),
-                                  Text(
-                                    "Unknown Pro",
-                                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                                          color: Colors.white,
-                                        ),
-                                  ),
-                                ],
-                              ),
-                              IconButton(
-                               icon: const Icon(Iconsax.search_normal),
-                               color: Colors.white,
-                              
-                               onPressed: () {
-                                 Get.to(() => const SearchBarApp());
-                               },
-                                
-                              ),
-                            ],
-                          ),
-                          
-                          SizedBox(height: 15.h),
-                          
-                          // Popular Categories Title
-                          Text(
-                            "Popular Categories",
-                            style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                                  
-                                  color: Colors.white,
-                                ),
-                          ),
-                          
-                          SizedBox(height: 15.h),
-                          
-                          // Popular Categories List
-                          SizedBox(
-                            height: 120.h,
-                            child: ListView(
-                              scrollDirection: Axis.horizontal,
+                  child: Stack(
+                    children: [
+                      // Decorative Circles
+                      Positioned(
+                        top: -90.h,
+                        right: -170.w,
+                        child: CircleWidget()
+                      ),
+                      Positioned(
+                        top: 90.h,
+                        right: -190.w,
+                        child: CircleWidget()
+                      ),
+                      
+                      // Main Content
+                      Padding(
+                        padding: EdgeInsets.only(top: 20.h, left: 20.w, right: 20.w),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            // Header Row with Trailing Icon
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                PopularCategoriesWidget(image: AppImages.running, name: 'Sports'),
-                                
-                                PopularCategoriesWidget(image: AppImages.sofa, name: 'Furniture'),
-                                
-                                PopularCategoriesWidget(image: AppImages.cpu, name: 'Electronics'),
-                               
-                                PopularCategoriesWidget(image: AppImages.clothes, name: 'Clothes'),
-                               
-                                PopularCategoriesWidget(image: AppImages.sneakers, name: 'Shoes'),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "Good Morning",
+                                      style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                    ),
+                                    Text(
+                                      "Hisam at",
+                                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                                            color: Colors.white,
+                                          ),
+                                    ),
+                                  ],
+                                ),
+                                IconButton(
+                                  icon: const Icon(Iconsax.search_normal),
+                                  color: Colors.white,
+                                  onPressed: () {
+                                    Get.to(() => const SearchBarApp());
+                                  },
+                                ),
                               ],
                             ),
+                            
+                            SizedBox(height: 23.h),
+                            
+                            // Popular Categories Title
+                            Text(
+                              AppText.popularCategories,
+                              style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                                    color: Colors.white,
+                                  ),
+                            ),
+                            
+                            SizedBox(height: 15.h),
+                            
+                            // Popular Categories List
+                            SizedBox(
+                              height: 100.h,
+                              child: ListView(
+                                scrollDirection: Axis.horizontal,
+                                children: [
+                                  PopularCategoriesWidget(image: AppImages.running, name: AppText.sports,ontap: (){},),
+                                  PopularCategoriesWidget(image: AppImages.sofa, name: AppText.furniture,ontap: (){},),
+                                  PopularCategoriesWidget(image: AppImages.cpu, name: AppText.electronics, ontap: () {
+                                    
+                                  },),
+                                  PopularCategoriesWidget(image: AppImages.clothes, name: AppText.clothes,ontap: () {
+                                    
+                                  },),
+                                  PopularCategoriesWidget(image: AppImages.sneakers, name: AppText.shoes,ontap: () {
+                                    
+                                  },)
+                                 
+                                  
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              
+              // Banner Section
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 15.h, horizontal: 20.w),
+                child: SizedBox(
+                  height: 150.h,
+                  child: PageView.builder(
+                    itemCount: banners.length,
+                    itemBuilder: (context, index) {
+                      return Container(
+                        margin: EdgeInsets.symmetric(horizontal: 5.w),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(12.r),
+                          image: DecorationImage(
+                            image: AssetImage(banners[index]),
+                            fit: BoxFit.cover,
                           ),
-                        ],
+                        ),
+                      );
+                    },
+                  ),
+                ),
+              ),
+              
+              // Popular Items Header
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20.w),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      AppText.popularItems,
+                      style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                            color: isDarkMode ? Colors.white : Colors.black,
+                            fontWeight: FontWeight.bold,
+                          ),
+                    ),
+                    TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        AppText.viewAll,
+                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                              color: Colors.blue,
+                            ),
                       ),
                     ),
-                   
                   ],
                 ),
               ),
-            ),
-            // Featured Items Section
-            
-           Padding(
-             padding: const EdgeInsets.only(
-               top: 20,
-               
-             ),
-             child: SizedBox(
-                height: 150.h, // Adjust height as needed
-                child: PageView.builder(
-                  itemCount: banners.length,
-                  itemBuilder: (context, index) {
-                    return Container(
-                      margin: EdgeInsets.symmetric(horizontal: 20.w),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12.r),
-                        image: DecorationImage(
-                          image: AssetImage(banners[index]),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    );
-                  },
+              
+              // Products Grid
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 15.w),
+                child: GridView.count(
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 15.h,
+                  crossAxisSpacing: 15.w,
+                  childAspectRatio: 0.6, // Adjust this for better product card proportions
+                  children: List.generate(8, (index) {
+                    return const Products();
+                  }),
                 ),
               ),
-           ),
-           ListTile(
-             title: Text(
-               'Popular Items',
-               style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                     color:isDarkMode ? Colors.white : Colors.black,
-                     fontWeight: FontWeight.bold,
-                   ),
-             ),
-             trailing: Text(
-               'See All',
-               style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                     color: Colors.blue,
-               )),
-           ),
-           Expanded(child: 
-           GridView.count(
-            crossAxisCount: 2 ,
-            children: List.generate(8, (index) {
-              return Products();
-            }),
-           
-           )
-           )
-          ],
+              SizedBox(height: 20.h), // Bottom padding
+            ],
+          ),
         ),
       ),
     );
