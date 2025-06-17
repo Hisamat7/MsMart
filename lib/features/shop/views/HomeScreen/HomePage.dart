@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:msmart/features/shop/controllers/HomeController.dart';
 import 'package:msmart/features/shop/views/HomeScreen/widgets/CircleWidget.dart';
 import 'package:msmart/features/shop/views/HomeScreen/widgets/PopularCategoriesWidget.dart';
 import 'package:msmart/features/common/widgets/SearchBarAPP.dart';
+import 'package:msmart/features/shop/views/HomeScreen/widgets/PromotionBanner.dart';
 import 'package:msmart/features/shop/views/Products/Products.dart';
 import 'package:msmart/features/utils/constants/colors/ColorsWidget.dart';
 import 'package:msmart/features/utils/constants/images/AppImages.dart';
@@ -16,11 +18,9 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isDarkMode = Theme.of(context).brightness == Brightness.dark;
-    final List<String> banners = [
-      AppImages.banner,
-      AppImages.banner, 
-      AppImages.banner,  
-    ];
+    final controller = PageController(initialPage: 0);
+
+    final homeController = Get.put(HomeController());
 
     return Scaffold(
       body: SafeArea(
@@ -131,29 +131,22 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
               ),
-              
+            
               // Banner Section
-              Padding(
-                padding: EdgeInsets.symmetric(vertical: 15.h, horizontal: 20.w),
-                child: SizedBox(
-                  height: 150.h,
-                  child: PageView.builder(
-                    itemCount: banners.length,
-                    itemBuilder: (context, index) {
-                      return Container(
-                        margin: EdgeInsets.symmetric(horizontal: 5.w),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(12.r),
-                          image: DecorationImage(
-                            image: AssetImage(banners[index]),
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      );
-                    },
-                  ),
-                ),
+            Padding(
+              padding:  EdgeInsets.symmetric(
+                vertical: 15.h, horizontal: 20.w
               ),
+              child: PromotionBanner(controller: controller,
+              image: [
+                AppImages.banner,
+                AppImages.banner2,
+                AppImages.banner3,
+                AppImages.banner4,
+                AppImages.banner5
+              ],
+              )
+            ),
               
               // Popular Items Header
               Padding(
