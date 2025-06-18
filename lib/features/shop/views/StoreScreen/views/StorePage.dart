@@ -3,13 +3,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:msmart/features/shop/views/HomeScreen/widgets/SectionHeadingWidget.dart';
 import 'package:msmart/features/shop/views/StoreScreen/widgets/BrandContainer.dart';
 import 'package:msmart/features/shop/views/StoreScreen/widgets/StoreHeader.dart';
-import 'package:msmart/features/utils/constants/colors/ColorsWidget.dart';
 import 'package:msmart/features/utils/constants/images/AppImages.dart';
 import 'package:msmart/features/utils/constants/text/AppText.dart';
 
 class StorePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
       body: NestedScrollView(
           headerSliverBuilder: (context, innerBoxIsScrolled) => [
@@ -40,7 +40,10 @@ class StorePage extends StatelessWidget {
                              
                               itemCount: 5,
                               itemBuilder: (context, index) {
-                                return BrandContainer();
+                                return BrandContainer(
+                                  image: AppImages.nike,
+                                   brandName: AppText.nike,
+                                );
                               }),
                           ),
                         )
