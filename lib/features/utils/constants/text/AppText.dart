@@ -70,4 +70,20 @@ class AppText {
   static const furniture = 'Furniture';
 
   static const popularCategories = "Popular Categories";
+
+  static const goodMorning = "Good Morning";
+  static const goodAfternoon = "Good Afternoon";
+  static const goodEvening = "Good Evening";
+
+  // brands logo
+  static const brands = "Brands";
+  static const nike = "Nike";
+  static const adidas = "Adidas";
+  static const puma = "Puma";
+  static const reebok = "Reebok";
+  static const vans = "Vans";
+  static const jordan = "Jordan";
+  static const newBalance = "New Balance";
+  static const converse = "Converse";
+  static const underArmour = "Under Armour";
 }

@@ -21,4 +21,14 @@ class AppImages {
    static const String banner4 = 'asset/image/banner_4.jpg';
    static const String banner5 = 'asset/image/banner_5.jpg';
    static const String banner6 = 'asset/image/banner_6.jpg';
+
+   // brand icons
+  static const String adidas = 'asset/image/adidas.jpg';
+  static const String nike = 'asset/image/nike.png';
+  static const String puma = 'asset/image/puma.png';
+  static const String reebok = 'asset/image/reebok.png';
+  static const String adidas2 = 'asset/image/adidas_2.png';
+  static const String nike2 = 'asset/image/nike_2.png';
+  static const String puma2 = 'asset/image/puma_2.png';
+  static const String reebok2 = 'asset/image/reebok_2.png';
 }

@@ -4,9 +4,10 @@ import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:msmart/features/shop/controllers/HomeController.dart';
 import 'package:msmart/features/shop/views/HomeScreen/widgets/CircleWidget.dart';
+import 'package:msmart/features/shop/views/HomeScreen/widgets/HeadingSectionWidget.dart';
 import 'package:msmart/features/shop/views/HomeScreen/widgets/PopularCategoriesWidget.dart';
-import 'package:msmart/features/common/widgets/SearchBarAPP.dart';
 import 'package:msmart/features/shop/views/HomeScreen/widgets/PromotionBanner.dart';
+import 'package:msmart/features/shop/views/HomeScreen/widgets/SectionHeadingWidget.dart';
 import 'package:msmart/features/shop/views/Products/Products.dart';
 import 'package:msmart/features/utils/constants/colors/ColorsWidget.dart';
 import 'package:msmart/features/utils/constants/images/AppImages.dart';
@@ -17,7 +18,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isDarkMode = Theme.of(context).brightness == Brightness.dark;
+    
     final controller = PageController(initialPage: 0);
 
     final homeController = Get.put(HomeController());
@@ -44,12 +45,18 @@ class HomePage extends StatelessWidget {
                       Positioned(
                         top: -90.h,
                         right: -170.w,
-                        child: CircleWidget()
+                        child: CircleWidget(
+                          height: 270.h,
+                          width: 270.w,
+                        )
                       ),
                       Positioned(
                         top: 90.h,
                         right: -190.w,
-                        child: CircleWidget()
+                        child: CircleWidget(
+                          height: 270.h,
+                          width: 270.w,
+                        )
                       ),
                       
                       // Main Content
@@ -59,36 +66,7 @@ class HomePage extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             // Header Row with Trailing Icon
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      "Good Morning",
-                                      style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                    ),
-                                    Text(
-                                      "Hisam at",
-                                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                                            color: Colors.white,
-                                          ),
-                                    ),
-                                  ],
-                                ),
-                                IconButton(
-                                  icon: const Icon(Iconsax.search_normal),
-                                  color: Colors.white,
-                                  onPressed: () {
-                                    Get.to(() => const SearchBarApp());
-                                  },
-                                ),
-                              ],
-                            ),
+                            HeadingSectionWidget(title: AppText.goodMorning, icon:Iconsax.search_normal, onTap: (){}),
                             
                             SizedBox(height: 23.h),
                             
@@ -149,30 +127,7 @@ class HomePage extends StatelessWidget {
             ),
               
               // Popular Items Header
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20.w),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      AppText.popularItems,
-                      style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                            color: isDarkMode ? Colors.white : Colors.black,
-                            fontWeight: FontWeight.bold,
-                          ),
-                    ),
-                    TextButton(
-                      onPressed: () {},
-                      child: Text(
-                        AppText.viewAll,
-                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                              color: Colors.blue,
-                            ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              SectionHeadingWidget(title: AppText.popularItems),
               
               // Products Grid
               Padding(

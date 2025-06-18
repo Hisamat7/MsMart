@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:msmart/features/shop/views/HomeScreen/HomePage.dart';
+import 'package:msmart/features/shop/views/StoreScreen/views/StorePage.dart';
 import 'package:msmart/features/utils/constants/colors/ColorsWidget.dart';
 
 class NavigationMenu extends StatelessWidget {
@@ -53,7 +54,7 @@ class NavigationMenuController extends GetxController {
   
   final List<Widget> screens = [
     HomePage(),
-    Container(color: Colors.green),
+    StorePage(),
     Container(color: Colors.blue),
     Container(color: Colors.yellow),
   ];

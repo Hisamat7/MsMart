@@ -2,13 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CircleWidget extends StatelessWidget {
-  const CircleWidget({super.key});
+  final double height;
+  final double width;
+  const CircleWidget({super.key, required this.height, required this.width});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-                      height: 270.h,
-                      width: 270.w,
+                      height:height,
+                      width: width,
                       decoration: BoxDecoration(
                         color: Colors.white.withOpacity(0.125),
                         shape: BoxShape.circle,

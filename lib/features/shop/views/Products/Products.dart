@@ -13,7 +13,7 @@ class Products extends StatelessWidget {
     final isDarkMode = Theme.of(context).brightness == Brightness.dark;
     
     return Container(
-      width: 180.w, 
+      width: 190.w, 
       decoration: BoxDecoration(
         color: isDarkMode ? Colors.grey[850] : const Color(0xFFF0F7FB),
         borderRadius: BorderRadius.circular(16.r),
@@ -23,7 +23,8 @@ class Products extends StatelessWidget {
         children: [
           // Top section with image and heart icon
           Container(
-            height: 160.h,
+            margin: EdgeInsets.only(left: 12.w, right: 12.w, top: 12.h),
+            height: 149.h,
             decoration: BoxDecoration(
               color: isDarkMode ? Colors.grey[800] : Colors.white,
               borderRadius: BorderRadius.circular(16.r),
@@ -32,8 +33,8 @@ class Products extends StatelessWidget {
               children: [
                 // Discount badge
                 Positioned(
-                  top: 12.h,
-                  left: 12.w,
+                  top: 8.h,
+                  left: 8.w,
                   child: Container(
                     padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 4.h),
                     decoration: BoxDecoration(
@@ -42,46 +43,30 @@ class Products extends StatelessWidget {
                     ),
                     child: Text(
                       '49%',
-                      style: TextStyle(
-                        color:AppColors.light,
-                        fontSize: 12.sp,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                            
+                          ),
                     ),
                   ),
                 ),
                 // Heart icon
                 Positioned(
-                  top: 0.h,
+                  top: -5.h,
                   right: 0.w,
-                  child: Container(
-                    width: 40.w,
-                    height: 40.h,
-                   
-                    decoration: BoxDecoration(
-                      color: AppColors.light,
-                      shape: BoxShape.circle,
-                      boxShadow: [
-                        BoxShadow(
-                          color: AppColors.dark.withOpacity(0.1),
-                          blurRadius: 4,
-                          offset: const Offset(0, 2),
-                        ),
-                      ],
-                    ),
+                 
                     child: IconButton(
                       onPressed: () {},
                      icon: Icon( Iconsax.heart),
-                      color: AppColors.dark,
+                      color: isDarkMode ? AppColors.light : AppColors.dark,
                     ),
                   ),
-                ),
+                
                 // Product image
                 Center(
                   child: Image.asset(
                     AppImages.iphone,
-                    height: 100.h,
-                    width: 100.w,
+                    height: 120.h,
+                    width: 120.w,
                     fit: BoxFit.contain,
                   ),
                 ),
