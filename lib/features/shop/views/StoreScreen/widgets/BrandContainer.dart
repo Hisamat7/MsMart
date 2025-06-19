@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:msmart/features/utils/constants/colors/ColorsWidget.dart';
 
 class BrandContainer extends StatelessWidget {
   final String image;
@@ -11,7 +10,7 @@ class BrandContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isDarkMode = Theme.of(context).brightness == Brightness.dark;
+    
     return Container(
                                   margin: EdgeInsets.only(right: 10.w),
                                   decoration: BoxDecoration(
