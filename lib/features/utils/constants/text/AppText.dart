@@ -62,6 +62,7 @@ class AppText {
   
   static const popularItems = "Popular Items";
   static const viewAll = 'view All';
+  static const youMightLike = 'You Might Like';
 
   static const sports = 'Sports';
   static const electronics = 'Electronics';
@@ -86,4 +87,6 @@ class AppText {
   static const newBalance = "New Balance";
   static const converse = "Converse";
   static const underArmour = "Under Armour";
+
+  static const wishlist = "Wishlist";
 }

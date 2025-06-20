@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:msmart/features/shop/views/HomeScreen/HomePage.dart';
 import 'package:msmart/features/shop/views/StoreScreen/views/StorePage.dart';
+import 'package:msmart/features/shop/views/WislistScreen/views/WishListPage.dart';
 import 'package:msmart/features/utils/constants/colors/ColorsWidget.dart';
 
 class NavigationMenu extends StatelessWidget {
@@ -55,7 +56,7 @@ class NavigationMenuController extends GetxController {
   final List<Widget> screens = [
     HomePage(),
     StorePage(),
-    Container(color: Colors.blue),
+    WishListPage(),
     Container(color: Colors.yellow),
   ];
 }
