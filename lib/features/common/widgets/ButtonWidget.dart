@@ -19,14 +19,7 @@ class ButtonWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: onPressed,  
-      child: Text(
-         style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-           color: textColor,
-         ),
-        text, 
-       
-      ),
+      onPressed: onPressed,
       style: ElevatedButton.styleFrom(
         
         minimumSize: Size(double.infinity, 50.h),
@@ -34,6 +27,13 @@ class ButtonWidget extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
         ),
         backgroundColor: color,
+      ),  
+      child: Text(
+         style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+           color: textColor,
+         ),
+        text, 
+       
       ),
     );
   }

@@ -17,7 +17,7 @@ class BrandCard extends StatelessWidget {
   final EdgeInsetsGeometry? padding;
 
   const BrandCard({
-    Key? key,
+    super.key,
     this.showTheimage = false,
     this.height,
     this.width,
@@ -28,19 +28,19 @@ class BrandCard extends StatelessWidget {
     this.onTap,
     this.margin,
     this.padding,
-  }) : super(key: key);
+  });
 
   Widget imageContainer(String image) {
     return   Container(
-                  child: Image.asset(
-                   image
-                  ),
                   width: 90.w,
                   height: 90.h,
                   decoration: BoxDecoration(
                     color:  Color.fromARGB(255, 193, 192, 192),
                     borderRadius: BorderRadius.circular(8.r),
                                       ),
+                  child: Image.asset(
+                   image
+                  ),
                 );
   }
   @override

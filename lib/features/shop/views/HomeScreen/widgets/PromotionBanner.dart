@@ -8,7 +8,7 @@ import 'package:msmart/features/shop/views/HomeScreen/widgets/OnBoardingDotNavig
 
 class PromotionBanner extends StatelessWidget {
   final controller;
-   PromotionBanner({super.key, required this.controller,required this.image});
+   const PromotionBanner({super.key, required this.controller,required this.image});
   final List<String> image ;
   @override
   Widget build(BuildContext context) {

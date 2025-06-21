@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class BannerWidget extends StatelessWidget {
   final String image;
   
-  const BannerWidget({Key? key, required this.image}) : super(key: key);
+  const BannerWidget({super.key, required this.image});
 
   @override
   Widget build(BuildContext context) {

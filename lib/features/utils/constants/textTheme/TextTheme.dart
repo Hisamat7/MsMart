@@ -82,8 +82,7 @@ class AppTheme {
     textTheme: AppTextThemes.darkTextTheme,
     appBarTheme: AppBarThemes.darkAppBarTheme,
     scaffoldBackgroundColor: Colors.grey[900],
-    cardColor: Colors.grey[800],
-    dialogBackgroundColor: Colors.grey[800],
+    cardColor: Colors.grey[800], dialogTheme: DialogThemeData(backgroundColor: Colors.grey[800]),
   );
 
   // Helper to get border color (optional, alternative to colorScheme)

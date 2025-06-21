@@ -7,12 +7,12 @@ class TextFieldWidget extends StatefulWidget {
   final String? Function(String?)? validator;
 
   const TextFieldWidget({
-    Key? key,
+    super.key,
     this.validator,
     required this.hintText,
     required this.icon,
     required this.label,
-  }) : super(key: key);
+  });
 
   @override
   State<TextFieldWidget> createState() => _TextFieldWidgetState();

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:msmart/features/personalization/views/profile/ProfilePage.dart';
 import 'package:msmart/features/shop/views/HomeScreen/HomePage.dart';
 import 'package:msmart/features/shop/views/StoreScreen/views/StorePage.dart';
 import 'package:msmart/features/shop/views/WislistScreen/views/WishListPage.dart';
@@ -8,6 +9,8 @@ import 'package:msmart/features/utils/constants/colors/ColorsWidget.dart';
 
 class NavigationMenu extends StatelessWidget {
   final controller = Get.put(NavigationMenuController());
+
+   NavigationMenu({super.key});
   
   @override
   Widget build(BuildContext context) {
@@ -57,6 +60,6 @@ class NavigationMenuController extends GetxController {
     HomePage(),
     StorePage(),
     WishListPage(),
-    Container(color: Colors.yellow),
+    ProfilePage()
   ];
 }

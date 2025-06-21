@@ -6,7 +6,7 @@ import 'package:msmart/features/utils/constants/colors/ColorsWidget.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class BannerDotNavigation extends StatelessWidget {
-   BannerDotNavigation({super.key,});
+   const BannerDotNavigation({super.key,});
  
 
  

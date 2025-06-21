@@ -31,4 +31,7 @@ class AppImages {
   static const String nike2 = 'asset/image/nike_2.png';
   static const String puma2 = 'asset/image/puma_2.png';
   static const String reebok2 = 'asset/image/reebok_2.png';
+
+  //profile pic 
+  static const String profile = 'asset/image/profile.png';
 }

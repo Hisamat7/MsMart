@@ -5,8 +5,9 @@ import 'package:msmart/features/utils/constants/text/AppText.dart';
 class SectionHeadingWidget extends StatelessWidget {
  final String title;
  final VoidCallback? onTap;
+ final bool viewAll;
 
-  const SectionHeadingWidget({super.key, required this.title, this.onTap});
+  const SectionHeadingWidget({super.key, required this.title, this.onTap,this.viewAll = true});
 
   @override
   Widget build(BuildContext context) {
@@ -25,12 +26,12 @@ class SectionHeadingWidget extends StatelessWidget {
                     ),
                     TextButton(
                       onPressed: onTap,
-                      child: Text(
+                      child:viewAll ? Text(
                         AppText.viewAll,
                         style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                               color: Colors.blue,
                             ),
-                      ),
+                      ) : Container(),
                     ),
                   ],
                 ),

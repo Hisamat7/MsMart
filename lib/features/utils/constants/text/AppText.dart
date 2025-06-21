@@ -10,6 +10,7 @@ class AppText {
   static const String loginScreenSubTitle = "Login into Access Exclusive Deals and Simplify Your Shopping Experience";
 
   static const String registerScreenTitle = "Let Get You Registered";
+  static const String logOut = "Log Out";
 
 
   static const forgetTitle = "Forget Password";
@@ -55,6 +56,7 @@ class AppText {
   static const verifyMailTitle = "Verify your email address!";
   static const verifyMailSubTitle = "We’ve sent a verification link to your email. Please check your inbox and click the link to verify your account";
   static const continues = "Continue";
+  static const accountSetting = "Account Settings";
 
   static const accountSuccessTextTitle = "Account Created Successfully!";
   static const accountSuccessTextSubTitle = "Congratulations! Your account has been successfully created. You can now explore all the amazing features, start personalizing your experience, and enjoy seamless access to our services. Let’s get started!";
@@ -89,4 +91,12 @@ class AppText {
   static const underArmour = "Under Armour";
 
   static const wishlist = "Wishlist";
+
+  static const myAddress = "My Address";
+  static const myCarts = "My Carts";
+  static const myOrders = "My Orders";
+
+  static const setshoppingdeliveryaddresses ="Set shopping delivery addresses";
+  static const addremoveproductsandmovetocheckout = 'Add, remove products and move to checkout';
+  static const inprogressandCompletedOrders ='In-progress and Completed Orders';
 }

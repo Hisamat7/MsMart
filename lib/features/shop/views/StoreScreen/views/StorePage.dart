@@ -9,6 +9,8 @@ import 'package:msmart/features/utils/constants/images/AppImages.dart';
 import 'package:msmart/features/utils/constants/text/AppText.dart';
 
 class StorePage extends StatelessWidget {
+  const StorePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(

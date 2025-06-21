@@ -9,12 +9,12 @@ class HeadingSectionWidget extends StatelessWidget {
   String subtitle;
 
   HeadingSectionWidget({
-    Key? key,
+    super.key,
     this.subtitle = "",
     required this.title,
     required this.icon,
     this.onTap,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

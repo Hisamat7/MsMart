@@ -9,7 +9,7 @@ class SuccessScreenWidget extends StatelessWidget {
   final String subTitle;
   final VoidCallback ?onPressed;
   final  String buttonText;
-  const SuccessScreenWidget({Key? key, required this.title, required this.subTitle,  this.onPressed, required this.buttonText}) : super(key: key);
+  const SuccessScreenWidget({super.key, required this.title, required this.subTitle,  this.onPressed, required this.buttonText});
 
   @override
   Widget build(BuildContext context) {
