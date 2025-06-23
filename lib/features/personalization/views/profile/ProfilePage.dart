@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:get/instance_manager.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:msmart/features/common/widgets/ButtonWidget.dart';
+import 'package:msmart/features/personalization/views/editProfile/EditProfile.dart';
 import 'package:msmart/features/personalization/widgets/ListTitleWidget.dart';
 import 'package:msmart/features/personalization/widgets/ProfileLogo.dart';
 import 'package:msmart/features/shop/views/HomeScreen/widgets/SectionHeadingWidget.dart';
-import 'package:msmart/features/utils/constants/images/AppImages.dart';
 import 'package:msmart/features/utils/constants/text/AppText.dart';
 
 class ProfilePage extends StatelessWidget {
@@ -34,7 +36,9 @@ class ProfilePage extends StatelessWidget {
               title: Text('Name',style: Theme.of(context).textTheme.headlineSmall,),
               subtitle: Text('John Doe',style: Theme.of(context).textTheme.bodySmall,),
               trailing: IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Get.to(() => EditProfile());
+                },
                 icon: Icon(Iconsax.edit_2),
             ),),
             SectionHeadingWidget(title: AppText.accountSetting,

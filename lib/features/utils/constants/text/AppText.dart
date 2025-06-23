@@ -57,6 +57,7 @@ class AppText {
   static const verifyMailSubTitle = "We’ve sent a verification link to your email. Please check your inbox and click the link to verify your account";
   static const continues = "Continue";
   static const accountSetting = "Account Settings";
+  static const profileSetting = "Profile Settings";
 
   static const accountSuccessTextTitle = "Account Created Successfully!";
   static const accountSuccessTextSubTitle = "Congratulations! Your account has been successfully created. You can now explore all the amazing features, start personalizing your experience, and enjoy seamless access to our services. Let’s get started!";
@@ -99,4 +100,16 @@ class AppText {
   static const setshoppingdeliveryaddresses ="Set shopping delivery addresses";
   static const addremoveproductsandmovetocheckout = 'Add, remove products and move to checkout';
   static const inprogressandCompletedOrders ='In-progress and Completed Orders';
+  
+
+  static const name = "Name";
+  static const userName = "User Name";
+  static const userId = "User Id";
+  static const email = "Email";
+  static const phone = "Phone";
+  static const address = "Address";
+  static const gender = 'Gender';
+
+  static const deleteAccount = 'Delete Account';
+  
 }
