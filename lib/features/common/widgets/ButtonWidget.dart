@@ -6,9 +6,12 @@ class ButtonWidget extends StatelessWidget {
   final VoidCallback? onPressed;
   final Color color;
   final Color textColor;
+  final double? height;
+  final double? width;
   
   const ButtonWidget({
-
+    this.height = 50,
+    this.width = double.infinity,
     super.key, 
     required this.text, 
     this.textColor = Colors.white,
@@ -22,7 +25,7 @@ class ButtonWidget extends StatelessWidget {
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
         
-        minimumSize: Size(double.infinity, 50.h),
+        minimumSize: Size(width!, height!),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10),
         ),

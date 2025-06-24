@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:get/instance_manager.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:msmart/features/shop/views/Products/ProductDetails.dart';
+import 'package:msmart/features/shop/views/Products/productDetails/views/ProductDetails.dart';
 import 'package:msmart/features/utils/constants/colors/ColorsWidget.dart';
 import 'package:msmart/features/utils/constants/images/AppImages.dart';
 

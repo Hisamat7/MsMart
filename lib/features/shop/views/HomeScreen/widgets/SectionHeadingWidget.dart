@@ -13,7 +13,7 @@ class SectionHeadingWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     
     return Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20.w),
+                padding: EdgeInsets.symmetric(horizontal: 10.w),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [

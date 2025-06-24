@@ -79,6 +79,9 @@ class AppText {
   static const goodAfternoon = "Good Afternoon";
   static const goodEvening = "Good Evening";
 
+  static const variation = "Variation";
+
+  static const checkOut = "Check Out";
   // brands logo
   static const brands = "Brands";
   static const nike = "Nike";
@@ -111,5 +114,20 @@ class AppText {
   static const gender = 'Gender';
 
   static const deleteAccount = 'Delete Account';
+
+  static const color = "Color";
+  static const size = "Size";
+
+  // colors
+  static const red = "Red";
+  static const green = "Green";
+  static const blue = "Blue";
+  static const yellow = "Yellow";
+  static const black = "Black";
+  static const white = "White";
+  static const grey = "Grey";
   
+  // description
+  static const description = "Description";
+  static const productDetailsDescription = "This is a product description of BATA brand shoes. There are more things that can be added but I’m...";
 }
