@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:get/instance_manager.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:msmart/features/common/widgets/ButtonWidget.dart';
+import 'package:msmart/features/personalization/views/Address/AddressPage.dart';
 import 'package:msmart/features/personalization/views/editProfile/EditProfile.dart';
 import 'package:msmart/features/personalization/widgets/ListTitleWidget.dart';
 import 'package:msmart/features/personalization/widgets/ProfileLogo.dart';
@@ -44,15 +45,21 @@ class ProfilePage extends StatelessWidget {
             SectionHeadingWidget(title: AppText.accountSetting,
             viewAll: false,
             ),
-            ListTitleWidget(title: AppText.myAddress, subtitle: AppText.setshoppingdeliveryaddresses, icon: Iconsax.home),
+            ListTitleWidget(title: AppText.myAddress, subtitle: AppText.setshoppingdeliveryaddresses, icon: Iconsax.home,onTap: () {
+              Get.to(() => AddressPage());
+            },),
             SizedBox(
               height: 10.h,
             ),
-            ListTitleWidget(title: AppText.myOrders, subtitle: AppText.addremoveproductsandmovetocheckout, icon: Iconsax.shopping_cart),
+            ListTitleWidget(title: AppText.myOrders, subtitle: AppText.addremoveproductsandmovetocheckout, icon: Iconsax.shopping_cart ,onTap: () {
+              
+            }),
             SizedBox(
               height: 10.h,
             ),
-            ListTitleWidget(title: AppText.myCarts, subtitle: AppText.inprogressandCompletedOrders, icon: Iconsax.heart),
+            ListTitleWidget(title: AppText.myCarts, subtitle: AppText.inprogressandCompletedOrders, icon: Iconsax.heart, onTap: () {
+              
+            }),
 
             SizedBox(
               height: 50.h,

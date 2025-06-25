@@ -48,7 +48,7 @@ class ProductDetails extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                 BrandNameWithShare(),
+                  BrandNameWithShare(),
                   SizedBox(
                     height: 10.h,
                   ),
@@ -56,46 +56,55 @@ class ProductDetails extends StatelessWidget {
                   SizedBox(
                     height: 10.h,
                   ),
-                 StockTitle(),
+                  StockTitle(),
                   SizedBox(
                     height: 10.h,
                   ),
-                 BrandTitleWithVerification(),
+                  BrandTitleWithVerification(),
                   SizedBox(
                     height: 10.h,
                   ),
                   ProductAttribute(),
-                  
-                  SectionHeadingWidget(title: AppText.color, viewAll: false,),
-                
+                  SectionHeadingWidget(
+                    title: AppText.color,
+                    viewAll: false,
+                  ),
                   Wrap(
                     children: [
-                    UChoiceChip(text: 'red', selected: false, onSelected: (p0) {}),
-                     
-                      UChoiceChip(text: 'blue', selected: false, onSelected: (p0) {}),
-                       UChoiceChip(text: 'orange', selected: false, onSelected: (p0) {}),
+                      UChoiceChip(
+                          text: 'red', selected: false, onSelected: (p0) {}),
+                      UChoiceChip(
+                          text: 'blue', selected: false, onSelected: (p0) {}),
+                      UChoiceChip(
+                          text: 'orange', selected: false, onSelected: (p0) {}),
                     ],
                   ),
-                
-                  SectionHeadingWidget(title: AppText.size, viewAll: false,),
-                
+                  SectionHeadingWidget(
+                    title: AppText.size,
+                    viewAll: false,
+                  ),
                   Wrap(
                     spacing: 10.w,
                     children: [
-                    UChoiceChip(text: 'small', selected: true, onSelected: (p0) {}),
-                     
-                      UChoiceChip(text: 'medium', selected: false, onSelected: (p0) {}),
-                       UChoiceChip(text: 'large', selected: false, onSelected: (p0) {}),
+                      UChoiceChip(
+                          text: 'small', selected: true, onSelected: (p0) {}),
+                      UChoiceChip(
+                          text: 'medium', selected: false, onSelected: (p0) {}),
+                      UChoiceChip(
+                          text: 'large', selected: false, onSelected: (p0) {}),
                     ],
                   ),
                   SizedBox(
                     height: 10.h,
                   ),
-                  ButtonWidget(text: AppText.checkOut, onPressed: (){}),
+                  ButtonWidget(text: AppText.checkOut, onPressed: () {}),
                   SizedBox(
                     height: 10.h,
                   ),
-                  SectionHeadingWidget(title: AppText.description, viewAll: false,),
+                  SectionHeadingWidget(
+                    title: AppText.description,
+                    viewAll: false,
+                  ),
                   ReadMoreText(
                     AppText.productDetailsDescription,
                     trimLines: 2,
