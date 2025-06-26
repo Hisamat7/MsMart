@@ -58,4 +58,5 @@ class AppImages {
   static const String product19 = 'asset/products/product 19.png';
   static const String product20 = 'asset/products/product 20.png';
   static const String product21 = 'asset/products/product 21.png';
+  static const String masterCard = 'asset/image/logos_mastercard.png';
 }

@@ -11,6 +11,7 @@ class CartContainer extends StatelessWidget {
   final int price;
   final String subTitle;
   final int quantity;
+  final bool isShowAddButton;
   const CartContainer({
     Key? key,
     required this.subTitle,
@@ -18,6 +19,7 @@ class CartContainer extends StatelessWidget {
     required this.title,
     required this.image,
     required this.price,
+    this.isShowAddButton = true,
   }) : super(key: key);
 
   @override
@@ -65,7 +67,7 @@ class CartContainer extends StatelessWidget {
                 SizedBox(
                   height: 10.h,
                 ),
-                Row(
+             isShowAddButton ?   Row(
                   children: [
                     UCircularContainer(
                       backgroundColor: AppColors.grey,
@@ -102,7 +104,8 @@ class CartContainer extends StatelessWidget {
                       style: Theme.of(context).textTheme.headlineSmall,
                     ),
                   ],
-                ),
+                )
+                : SizedBox.shrink(), 
               ],
             ),
             );

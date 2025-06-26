@@ -6,8 +6,8 @@ class SectionHeadingWidget extends StatelessWidget {
  final String title;
  final VoidCallback? onTap;
  final bool viewAll;
-
-  const SectionHeadingWidget({super.key, required this.title, this.onTap,this.viewAll = true});
+final String subtitle ;
+  const SectionHeadingWidget({super.key, required this.title, this.onTap,this.viewAll = true, this.subtitle = 'View All'});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class SectionHeadingWidget extends StatelessWidget {
                     TextButton(
                       onPressed: onTap,
                       child:viewAll ? Text(
-                        AppText.viewAll,
+                        subtitle,
                         style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                               color: Colors.blue,
                             ),
