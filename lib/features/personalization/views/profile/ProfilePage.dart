@@ -5,6 +5,7 @@ import 'package:get/instance_manager.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:msmart/features/common/widgets/ButtonWidget.dart';
 import 'package:msmart/features/personalization/views/Address/AddressPage.dart';
+import 'package:msmart/features/personalization/views/Cart/CartPage.dart';
 import 'package:msmart/features/personalization/views/editProfile/EditProfile.dart';
 import 'package:msmart/features/personalization/widgets/ListTitleWidget.dart';
 import 'package:msmart/features/personalization/widgets/ProfileLogo.dart';
@@ -57,8 +58,8 @@ class ProfilePage extends StatelessWidget {
             SizedBox(
               height: 10.h,
             ),
-            ListTitleWidget(title: AppText.myCarts, subtitle: AppText.inprogressandCompletedOrders, icon: Iconsax.heart, onTap: () {
-              
+            ListTitleWidget(title: AppText.myCarts, subtitle: AppText.inprogressandCompletedOrders, icon: Iconsax.bag, onTap: () {
+              Get.to(() => CartPage());
             }),
 
             SizedBox(

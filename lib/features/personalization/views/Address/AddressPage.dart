@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:get/instance_manager.dart';
 import 'package:msmart/features/common/widgets/ContainerWidget.dart';
+import 'package:msmart/features/personalization/views/Address/AddNewAddress.dart';
 import 'package:msmart/features/personalization/views/Address/AddressEditPage.dart';
 
 class AddressPage extends StatelessWidget {
@@ -22,30 +23,23 @@ class AddressPage extends StatelessWidget {
           Get.to(()=>AddressEditPage());
         },child: Icon(Icons.add),),
       ),
-      body: Padding(
-        padding: const EdgeInsets.only(
-          left: 20,
-          right: 20
-        ),
-        child: ListView.separated(
-          itemBuilder: (context, index) => ContainerWidget(
-            borderRadius: BorderRadius.circular(10),
-            padding: const EdgeInsets.all(20),
-            border: Border.all(color: Colors.grey),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text('Address $index'),
-                Text('Address $index'),
-                Text('Address $index'),
-              ],
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.only(
+            left: 20,
+            right: 20
+          ),
+          child: ListView.separated(
+            itemBuilder: (context, index) =>  AddNewAddress(
+              isSelected: true,
+              title: 'Home',
             ),
-          ), 
-          separatorBuilder: (context, index) {
-          return const SizedBox(
-            height: 10,
-          );
-        }, itemCount: 2, shrinkWrap: true, physics: const NeverScrollableScrollPhysics(),),
+            separatorBuilder: (context, index) {
+            return const SizedBox(
+              height: 10,
+            );
+          }, itemCount: 2, shrinkWrap: true, physics: const NeverScrollableScrollPhysics(),),
+        ),
       ),
       
     );
