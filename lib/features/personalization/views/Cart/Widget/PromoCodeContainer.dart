@@ -16,8 +16,13 @@ class PromoCodeContainer extends StatelessWidget {
               border: Border.all(color: Colors.grey),
               child:Row(
                 children: [
-                  Text('Promo Code',style: Theme.of(context).textTheme.headlineSmall,),
-                  const Spacer(),
+                 Flexible(child: TextField(
+                   decoration: InputDecoration(
+                     border: InputBorder.none,
+                     hintText: "Enter your Promo Code"
+                   ),
+                 )),
+                
                  ButtonWidget(
                   color: AppColors.darkGrey,
                   height: 40.h,
