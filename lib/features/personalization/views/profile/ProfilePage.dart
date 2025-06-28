@@ -5,11 +5,12 @@ import 'package:get/instance_manager.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:msmart/features/common/widgets/ButtonWidget.dart';
 import 'package:msmart/features/personalization/views/Address/AddressPage.dart';
-import 'package:msmart/features/personalization/views/Cart/CartPage.dart';
+import 'package:msmart/features/shop/views/Cart/CartPage.dart';
 import 'package:msmart/features/personalization/views/editProfile/EditProfile.dart';
 import 'package:msmart/features/personalization/widgets/ListTitleWidget.dart';
 import 'package:msmart/features/personalization/widgets/ProfileLogo.dart';
 import 'package:msmart/features/shop/views/HomeScreen/widgets/SectionHeadingWidget.dart';
+import 'package:msmart/features/shop/views/OrderScreen/OrderScreen.dart';
 import 'package:msmart/features/utils/constants/text/AppText.dart';
 
 class ProfilePage extends StatelessWidget {
@@ -53,7 +54,7 @@ class ProfilePage extends StatelessWidget {
               height: 10.h,
             ),
             ListTitleWidget(title: AppText.myOrders, subtitle: AppText.addremoveproductsandmovetocheckout, icon: Iconsax.shopping_cart ,onTap: () {
-              
+              Get.to(()=> OrderScreen());
             }),
             SizedBox(
               height: 10.h,

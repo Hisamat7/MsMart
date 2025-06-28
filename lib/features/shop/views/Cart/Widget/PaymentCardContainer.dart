@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:msmart/features/common/widgets/ContainerWidget.dart';
-import 'package:msmart/features/personalization/views/Cart/Widget/AddressCard.dart';
-import 'package:msmart/features/personalization/views/Cart/Widget/RowPaymentCard.dart';
+import 'package:msmart/features/shop/views/Cart/Widget/AddressCard.dart';
+import 'package:msmart/features/shop/views/Cart/Widget/RowPaymentCard.dart';
 import 'package:msmart/features/shop/views/HomeScreen/widgets/SectionHeadingWidget.dart';
 import 'package:msmart/features/utils/constants/colors/ColorsWidget.dart';
 import 'package:msmart/features/utils/constants/images/AppImages.dart';

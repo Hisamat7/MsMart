@@ -27,8 +27,8 @@ class CartContainer extends StatelessWidget {
     return ContainerWidget(
             color: Colors.transparent,
             borderRadius: BorderRadius.circular(10),
-            padding: const EdgeInsets.all(20),
-            border: Border.all(color: Colors.grey.shade200),
+            padding: const EdgeInsets.all(10),
+            // border: Border.all(color: Colors.grey.shade200),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -57,7 +57,7 @@ class CartContainer extends StatelessWidget {
                           Text(
                             subTitle,
                             style:
-                                Theme.of(context).textTheme.headlineSmall,
+                                Theme.of(context).textTheme.labelSmall,
                           ),
                         ],
                       ),

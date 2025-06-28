@@ -103,8 +103,11 @@ class AppText {
   static const setshoppingdeliveryaddresses ="Set shopping delivery addresses";
   static const addremoveproductsandmovetocheckout = 'Add, remove products and move to checkout';
   static const inprogressandCompletedOrders ='In-progress and Completed Orders';
+  static const paymentSuccess = 'Payment Success!';
+  static const yourItemWillBeShippedSoon = 'Your item will be shipped soon!';
 
   static const paymentMethod = 'Payment Method';
+  static const continueShopping = 'Continue Shopping';
   static const change = 'Change';
   static const shippingAddress = 'Shipping Address';
   static const name = "Name";
