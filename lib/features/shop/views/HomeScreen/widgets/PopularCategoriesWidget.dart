@@ -16,11 +16,11 @@ class PopularCategoriesWidget extends StatelessWidget {
      final isDarkMode = Theme.of(context).brightness == Brightness.dark;
     return Padding(
       padding: EdgeInsets.only(right: 15.w),
-      child: GestureDetector(
-        onTap: () {},
-        child: Column(
-          children: [
-            Container(
+      child: Column(
+        children: [
+          InkWell(
+            onTap: ontap,
+            child: Container(
               width: 70.w,
               height: 70.h,
               decoration: BoxDecoration(
@@ -31,17 +31,17 @@ class PopularCategoriesWidget extends StatelessWidget {
                 image,
               ),
             ),
-            SizedBox(height: 5.h),
-            Text(
-              name,
-              style: TextStyle(
-                fontSize: 12.sp,
-                color: Colors.white,
-                fontWeight: FontWeight.w500,
-              ),
+          ),
+          SizedBox(height: 5.h),
+          Text(
+            name,
+            style: TextStyle(
+              fontSize: 12.sp,
+              color: Colors.white,
+              fontWeight: FontWeight.w500,
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

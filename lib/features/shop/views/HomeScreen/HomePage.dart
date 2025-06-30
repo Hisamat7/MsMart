@@ -9,6 +9,7 @@ import 'package:msmart/features/shop/views/HomeScreen/widgets/PopularCategoriesW
 import 'package:msmart/features/shop/views/HomeScreen/widgets/PromotionBanner.dart';
 import 'package:msmart/features/shop/views/HomeScreen/widgets/SectionHeadingWidget.dart';
 import 'package:msmart/features/shop/views/Products/Products.dart';
+import 'package:msmart/features/shop/views/SubCategories/SubCategories.dart';
 import 'package:msmart/features/utils/constants/colors/ColorsWidget.dart';
 import 'package:msmart/features/utils/constants/images/AppImages.dart';
 import 'package:msmart/features/utils/constants/text/AppText.dart';
@@ -86,7 +87,9 @@ class HomePage extends StatelessWidget {
                               child: ListView(
                                 scrollDirection: Axis.horizontal,
                                 children: [
-                                  PopularCategoriesWidget(image: AppImages.running, name: AppText.sports,ontap: (){},),
+                                  PopularCategoriesWidget(image: AppImages.running, name: AppText.sports,ontap: (){
+                                    Get.to(()=> SubCategories());
+                                  },),
                                   PopularCategoriesWidget(image: AppImages.sofa, name: AppText.furniture,ontap: (){},),
                                   PopularCategoriesWidget(image: AppImages.cpu, name: AppText.electronics, ontap: () {
                                     
