@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:msmart/features/shop/controllers/HomeController.dart';
+import 'package:msmart/features/shop/views/AllProducts/AllProducts.dart';
 import 'package:msmart/features/shop/views/HomeScreen/widgets/CircleWidget.dart';
 import 'package:msmart/features/shop/views/HomeScreen/widgets/HeadingSectionWidget.dart';
 import 'package:msmart/features/shop/views/HomeScreen/widgets/PopularCategoriesWidget.dart';
@@ -130,7 +131,9 @@ class HomePage extends StatelessWidget {
             ),
               
               // Popular Items Header
-              SectionHeadingWidget(title: AppText.popularItems),
+              SectionHeadingWidget(title: AppText.popularItems,onTap: (){
+                Get.to(()=> AllProducts());
+              }),
               
               // Products Grid
               Padding(

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:msmart/features/shop/views/AllBrands/AllBrands.dart';
 import 'package:msmart/features/shop/views/HomeScreen/widgets/SectionHeadingWidget.dart';
 import 'package:msmart/features/shop/views/StoreScreen/widgets/BrandCard.dart';
 import 'package:msmart/features/shop/views/StoreScreen/widgets/CategoryTabWidget.dart';
@@ -31,7 +33,9 @@ class StorePage extends StatelessWidget {
                     // Section Heading
                     SectionHeadingWidget(
                       title: AppText.brands,
-                      onTap: () {},
+                      onTap: () {
+                       Get.to(() => AllBrands());
+                      },
                     ),
                     // Brands Section
              

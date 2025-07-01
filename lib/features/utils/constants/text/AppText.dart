@@ -135,4 +135,6 @@ class AppText {
   // description
   static const description = "Description";
   static const productDetailsDescription = "This is a product description of BATA brand shoes. There are more things that can be added but I’m...";
+  static const allProducts = 'All Products';
+  static const myOrdersDetails = 'My Orders Details';
 }

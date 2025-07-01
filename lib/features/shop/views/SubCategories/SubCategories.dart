@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:iconsax/iconsax.dart';
-import 'package:msmart/features/common/widgets/ContainerWidget.dart';
 import 'package:msmart/features/shop/views/HomeScreen/widgets/SectionHeadingWidget.dart';
 import 'package:msmart/features/shop/views/SubCategories/SubCategoriesWidget.dart';
-import 'package:msmart/features/utils/constants/colors/ColorsWidget.dart';
-import 'package:msmart/features/utils/constants/images/AppImages.dart';
 import 'package:msmart/features/utils/constants/text/AppText.dart';
 
 class SubCategories extends StatelessWidget {
@@ -13,7 +9,6 @@ class SubCategories extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isDarkMode = Theme.of(context).brightness == Brightness.dark;
     return Scaffold(
       appBar: AppBar(
         title: Text(
